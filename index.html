@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE ARE TRADER | Official Owner: Abdul Samad</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .settings {
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .log {
+            margin-top: 30px;
+        }
+
+        ul#logList {
+            list-style: none;
+            padding: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fafafa;
+        }
+
+        ul#logList li {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #333;
+        }
+
+        ul#logList li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WE ARE TRADER</h1>
+        <h2>Official owner is Abdul Samad</h2>
+
+        <div class="settings">
+            <h3>Settings</h3>
+            
+            <label for="asset">Choose Asset:</label>
+            <select id="asset">
+                <!-- All assets available on Quotex added here -->
+                <option value="EURUSD">EUR/USD</option>
+                <option value="USDJPY">USD/JPY</option>
+                <option value="GBPUSD">GBP/USD</option>
+                <option value="AUDCAD">AUD/CAD</option>
+                <option value="EURCAD">EUR/CAD</option>
+                <option value="NDX">NASDAQ</option>
+                <option value="XAUUSD">Gold (XAU/USD)</option>
+                <option value="BTCUSD">Bitcoin (BTC/USD)</option>
+            </select>
+            
+            <label for="strategy">Choose Strategy:</label>
+            <select id="strategy">
+                <option value="maCross">Moving Average Crossover</option>
+                <option value="rsi">RSI</option>
+                <option value="macd">MACD</option>
+            </select>
+
+            <button onclick="startBot()">Start Trading</button>
+        </div>
+
+        <div class="log">
+            <h3>Trading log</h3>
+            <ul id="logList"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
